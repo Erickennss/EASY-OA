@@ -36,7 +36,7 @@ const LoginPage = () => {
           setIsRegister(false);
         } else {
           message.success(response.data.message);
-          navigate("/tasks");
+          navigate("/home");
         }
       } else {
         message.error(response.data.message);
@@ -54,10 +54,9 @@ const LoginPage = () => {
   return (
     <div className="login-container">
       <div className="login-box">
-        <img src={logo} alt="OA 系统 logo" className="login-logo" />{" "}
-        {/* 添加 logo */}
+        <img src={logo} alt="OA 系统 logo" className="login-logo" />
         <h1 className="login-title">
-          {isRegister ? "OA 办公系统注册" : "OA 办公系统登录"}
+          {isRegister ? "EASY OA 注册" : "EASY OA 登录"}
         </h1>
         <Form
           form={form}

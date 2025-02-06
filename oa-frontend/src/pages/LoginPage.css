@@ -1,24 +1,33 @@
 /* 登录容器样式 */
 .login-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  min-height: 100vh;
-  background-color: #f0f2f5;
-  padding: 20px;
+  height: 100vh; /* 高度设置为视口高度 */
+  width: 100vw; /* 宽度设置为视口宽度 */
+  background-image: url("../assets/newbg.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 47% 100%; /* 使背景图片完全包含在容器内 */
+  overflow: hidden; /* 隐藏溢出内容，防止出现滚动条 */
+  padding: 50px;
+  box-sizing: border-box; /* 包含内边距和边框在宽度和高度内 */
 }
 
-/* 登录框样式，调整宽度 */
+/* 登录框样式 */
 .login-box {
   background-color: #fff;
   padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.125);
   width: 100%;
-  max-width: 450px; /* 增大最大宽度，可根据需求调整 */
+  height: 70%;
+  max-height: 500px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 10rem;
 }
 
 /* 登录标题样式 */
@@ -34,8 +43,8 @@
 }
 
 /* 输入框样式 */
-.login-form .ant-input {
-  height: 40px;
+.login-form.ant-input {
+  height: auto;
   border-radius: 4px;
   border: 1px solid #d9d9d9;
   padding: 0 12px;
@@ -43,18 +52,18 @@
   transition: border-color 0.3s ease;
 }
 
-.login-form .ant-input:hover {
+.login-form.ant-input:hover {
   border-color: #40a9ff;
 }
 
-.login-form .ant-input:focus {
+.login-form.ant-input:focus {
   border-color: #40a9ff;
-  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  box-shadow: 0 0 0 2px rgba(0, 235, 121, 0.71);
   outline: none;
 }
 
 /* 输入框前缀图标样式 */
-.login-form .site-form-item-icon {
+.login-form.site-form-item-icon {
   color: rgba(0, 0, 0, 0.25);
   margin-right: 8px;
 }
@@ -86,27 +95,12 @@
 }
 
 /* 媒体查询，适用于小屏幕设备（如手机） */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+  .login-container {
+    background-image: none;
+    justify-content: center;
+  }
   .login-box {
-    padding: 20px;
-  }
-
-  .login-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .login-form .ant-input {
-    height: 36px;
-    font-size: 13px;
-  }
-
-  .login-form-button {
-    height: 36px;
-    font-size: 15px;
-  }
-
-  .login-logo {
-    width: 80px;
+    max-width: 90%;
   }
 }

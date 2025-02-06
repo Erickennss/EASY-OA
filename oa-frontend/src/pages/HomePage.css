@@ -1,0 +1,82 @@
+/* 整体容器样式 */
+.home-container {
+  padding: 20px;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+}
+
+/* Tabs 样式 */
+.ant-tabs {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.ant-tabs-tab {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ant-tabs-tab-active {
+  color: #1890ff;
+}
+
+.ant-tabs-ink-bar {
+  background-color: #1890ff;
+}
+
+/* 消息列表样式 */
+.ant-list {
+  margin-bottom: 20px;
+}
+
+.ant-list-item {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 15px 0;
+}
+
+.ant-list-item-meta-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.ant-list-item-meta-description p {
+  margin: 0;
+}
+
+.ant-list-item-meta-description p:last-child {
+  color: #999;
+  font-size: 14px;
+}
+
+/* 输入框和按钮样式 */
+.ant-input {
+  height: 40px;
+  border-radius: 4px;
+}
+
+.ant-btn-primary {
+  height: 40px;
+  border-radius: 4px;
+}
+
+/* 通讯录列表样式 */
+/* 与消息列表样式类似，可根据需要调整 */
+
+/* 文档协同编辑样式 */
+.quill-container {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  height: 400px;
+  margin-top: 20px;
+}
+
+.quill-container .ql-toolbar {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.quill-container .ql-container {
+  height: calc(100% - 42px); /* 减去工具栏高度 */
+}
